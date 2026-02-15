@@ -1,33 +1,43 @@
 # Chat-GPT-Analysis
 📌 Project Overview
 
-This project analyzes user reviews and ratings shared for ChatGPT to understand customer satisfaction, identify recurring issues, and track how sentiment evolves over time.
+This project performs a comprehensive analysis of customer reviews for ChatGPT using Python and Natural Language Processing (NLP) techniques.
 
-By combining exploratory data analysis (EDA), sentiment analysis, text mining, and time-series analysis, this project provides actionable insights that can help improve product quality and user experience.
+The primary objective is to transform unstructured textual feedback into structured insights that help understand user satisfaction, sentiment patterns, and recurring strengths or concerns.
 
-The dataset contains:
+By combining sentiment analysis, subjectivity scoring, keyword extraction, and time-series trend evaluation, this project converts raw review data into actionable business intelligence.
+
+🎯 Business Objective
+
+Customer reviews contain valuable insights that influence product improvement and strategic decision-making.
+
+This project aims to answer the following key questions:
+
+What overall sentiment do users express about ChatGPT?
+
+How strong or opinionated are those sentiments?
+
+What specific features do users frequently praise?
+
+What recurring issues drive negative feedback?
+
+How does user perception change over time?
+
+The ultimate goal is to provide data-driven recommendations for improving product experience.
+
+📂 Dataset Description
+
+The dataset includes:
 
 Review ID – Unique identifier
 
-Review Text – User feedback
+Review – Textual feedback from users
 
-Rating – Satisfaction score (0–5)
+Rating – Satisfaction score (0–5 scale)
 
-Review Date – Date when the review was posted
+Review Date – Date of submission
 
-🎯 Project Objectives
-
-The key objectives of this project were:
-
-Perform Sentiment Analysis to classify reviews as Positive, Negative, or Neutral
-
-Analyze rating distribution and overall satisfaction level
-
-Identify common complaint themes in negative reviews
-
-Conduct time-series analysis to track changes in sentiment over time
-
-Generate business recommendations based on insights
+The data is review-level, allowing both quantitative and qualitative analysis.
 
 🛠️ Tools & Technologies Used
 
@@ -35,94 +45,85 @@ Python
 
 Jupyter Notebook
 
-Pandas (Data manipulation)
+Pandas – Data manipulation
 
-NumPy (Numerical operations)
+NumPy – Numerical operations
 
-Matplotlib & Seaborn (Visualization)
+Matplotlib & Seaborn – Data visualization
 
-TextBlob (Sentiment Analysis)
+TextBlob – Sentiment polarity & subjectivity analysis
 
-WordCloud (Text visualization)
+WordCloud – Text visualization
 
-🔍 What Was Done in This Project
-1️⃣ Data Cleaning & Preprocessing
+Regex & Counter – Keyword extraction
 
-Removed missing review entries
+🔎 Project Implementation
+1️⃣ Data Preparation
 
-Converted review dates to datetime format
+The dataset was cleaned and prepared through:
 
-Created additional features:
+Standardizing column names
 
-Month column (for time-series analysis)
+Handling missing review text
 
-Review Length column
+Converting ratings to numeric format
 
-Sentiment Score
+Converting review dates to datetime
 
-Sentiment Category
+Creating additional features:
 
-This ensured the dataset was structured and ready for analysis.
+Sentiment Polarity
+
+Sentiment Subjectivity
+
+Review Length
+
+Monthly grouping for trend analysis
+
+These preprocessing steps ensured data consistency and analytical accuracy.
 
 2️⃣ Exploratory Data Analysis (EDA)
 
-Analyzed rating distribution
+EDA was performed to understand rating distribution and user behavior patterns:
 
-Calculated average rating
+Rating frequency distribution
 
-Identified frequency of ratings from 0–5
+Average rating calculation
 
-Examined relationship between review length and rating
+Review length analysis
 
-This helped in understanding overall satisfaction patterns.
+Review trends over time
+
+Key observation:
+Higher ratings dominate the dataset, but negative reviews tend to be more detailed and subjective.
 
 3️⃣ Sentiment Analysis
 
-Applied TextBlob to calculate polarity score
+Using TextBlob, two important metrics were calculated:
 
-Classified reviews into:
+Polarity – Measures positivity or negativity
+
+Subjectivity – Measures opinion intensity
+
+Reviews were categorized as:
 
 Positive
 
-Negative
-
 Neutral
 
-The sentiment classification was compared with numerical ratings to validate consistency.
+Negative
 
-4️⃣ Text Mining & Issue Identification
+The sentiment distribution closely aligns with rating trends, validating the analysis approach.
 
-Generated Word Clouds for positive and negative reviews
+4️⃣ Text Analysis & Keyword Extraction
 
-Extracted most common words from negative reviews
+To identify recurring themes:
 
-Identified recurring complaint themes such as:
+Frequently used words were extracted from positive and negative reviews
 
-Accuracy issues
+Word clouds were generated for visualization
 
-Slow responses
-
-Occasional incorrect answers
-
-This helped highlight product improvement areas.
-
-5️⃣ Time-Series Analysis
-
-Analyzed number of reviews over time
-
-Examined average rating trend by month
-
-Identified fluctuations in sentiment
-
-This analysis helps monitor long-term performance and user perception.
-
-📊 Key Insights
-
-The majority of reviews are positive, indicating strong overall satisfaction.
-
-The average rating reflects a favorable perception of ChatGPT.
-
-Most appreciated aspects include:
+Common praise themes included:
 
 Helpfulness
 
@@ -130,44 +131,69 @@ Speed
 
 Ease of use
 
-Common negative themes include:
+Common criticism themes included:
+
+Accuracy issues
 
 Incorrect responses
 
-Accuracy in complex queries
+Performance delays
 
-Occasional performance delays
+This step helped pinpoint specific strengths and improvement areas.
 
-Some periods show slight dips in ratings, indicating the importance of continuous monitoring.
+5️⃣ Time-Series Sentiment Analysis
+
+Monthly sentiment trends were analyzed to observe changes in perception over time.
+
+This analysis revealed:
+
+Overall stable positive sentiment
+
+Occasional dips indicating periods requiring attention
+
+Importance of continuous feedback monitoring
+
+📊 Key Insights
+
+Overall user sentiment toward ChatGPT is strongly positive.
+
+Helpfulness and usability are core strengths.
+
+Accuracy in complex responses remains the primary area for improvement.
+
+Negative reviews exhibit higher subjectivity, indicating strong user expectations.
+
+Sentiment trends fluctuate, highlighting the need for ongoing monitoring.
 
 🚀 Business Recommendations
 
-Based on the analysis, the following recommendations are suggested:
+Based on the analysis:
 
-Improve accuracy for advanced and complex queries.
+Enhance accuracy for advanced and technical queries.
 
-Monitor negative sentiment trends monthly.
+Implement real-time sentiment monitoring dashboards.
 
-Optimize system performance to reduce latency.
+Categorize negative feedback into structured issue groups.
 
-Categorize recurring complaints to prioritize development efforts.
+Track subjectivity levels to identify emotionally strong dissatisfaction.
 
-Build a real-time sentiment monitoring dashboard.
+Use NLP automation to detect recurring complaint patterns early.
 
 📈 Conclusion
 
-This project provides a structured and data-driven evaluation of user feedback. The analysis reveals that overall satisfaction is high, but specific improvement areas remain.
+This project demonstrates how Natural Language Processing and data analytics can convert raw textual reviews into meaningful strategic insights.
 
-By continuously tracking sentiment trends and addressing recurring issues, user experience can be further enhanced.
+While overall perception of ChatGPT is positive, targeted improvements in accuracy and performance optimization can further enhance user satisfaction.
 
-This project demonstrates how text analytics and time-series analysis can transform raw feedback into meaningful business insights.
+The project highlights the importance of continuous sentiment monitoring in AI-based product ecosystems.
 
 👤 Author
 
-Rutvik Kajrekar Data Analytics Project
+Rutvik Kajrekar
+Chat GPT Review Analysis Project
 
 📂 Repository Structure
-├── ChatGPT_Reviews_Analysis_Project.ipynb
+├── ChatGPT_Review_Analysis_Solution.ipynb
 ├── chatgpt_reviews.csv
 └── README.md
 
@@ -175,10 +201,10 @@ Rutvik Kajrekar Data Analytics Project
 
 This project showcases:
 
-Practical implementation of sentiment analysis
+Practical implementation of sentiment polarity and subjectivity analysis
 
-Real-world data cleaning and preprocessing
+Text mining and feature extraction
 
-Insight-driven storytelling with visualizations
+Data storytelling through visualizations
 
-Application of NLP techniques in business analytics
+Translation of technical results into actionable business insights
