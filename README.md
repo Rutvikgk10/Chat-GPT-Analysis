@@ -162,6 +162,10 @@ By continuously tracking sentiment trends and addressing recurring issues, user 
 
 This project demonstrates how text analytics and time-series analysis can transform raw feedback into meaningful business insights.
 
+👤 Author
+
+Rutvik Kajrekar Data Analytics Project
+
 📂 Repository Structure
 ├── ChatGPT_Reviews_Analysis_Project.ipynb
 ├── chatgpt_reviews.csv
